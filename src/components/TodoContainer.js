@@ -5,19 +5,35 @@ import '../styles/TodoContainer.css';
 
 function TodoContainer() {
 
-  const [todos, setTodos] = useState([]);
+  const localStorageTodos = localStorage.getItem('TODOS_V1');
+  let parsedTodos;
+
+  if (!localStorageTodos) {
+    localStorage.setItem('TODOS_V1', JSON.stringify([]));
+    parsedTodos = [];
+  } else {
+    parsedTodos = JSON.parse(localStorageTodos);
+  }
+
+  const saveTodos = (newTodos) => {
+    const stringifiedTodos = JSON.stringify(newTodos);
+    localStorage.setItem('TODOS_V1', stringifiedTodos);
+    setTodos(newTodos);
+  };
+
+  const [todos, setTodos] = useState(parsedTodos);
 
   const addTodo = todo => {
     if (todo.text.trim()) {
       todo.text = todo.text.trim();
       const updatedTodo = [todo, ...todos];
-      setTodos(updatedTodo)
+      saveTodos(updatedTodo)
     }
   };
 
   const deleteTodo = id => {
     const updatedTodo = todos.filter(todo => todo.id !== id);
-    setTodos(updatedTodo);
+    saveTodos(updatedTodo);
   };
 
   const completeTodo = id => {
@@ -27,7 +43,7 @@ function TodoContainer() {
       }
       return todo;
     });
-    setTodos(updatedTodo);
+    saveTodos(updatedTodo);
   };
 
   return (
