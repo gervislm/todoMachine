@@ -27,7 +27,7 @@ function TodoContainer() {
     if (todo.text.trim()) {
       todo.text = todo.text.trim();
       const updatedTodo = [todo, ...todos];
-      saveTodos(updatedTodo)
+      saveTodos(updatedTodo);
     }
   };
 

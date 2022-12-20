@@ -20,6 +20,7 @@ function TodoForm(props) {
     }
 
     props.onSubmit(newTodo);
+    setInput('');
   };
 
   return (
@@ -27,6 +28,7 @@ function TodoForm(props) {
       className='todo-form'
       onSubmit={submitManage}>
       <input
+        value={input}
         className='todo-input'
         type='text'
         placeholder='Write a Task'
