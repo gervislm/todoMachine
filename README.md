@@ -16,11 +16,11 @@ Install
 
 1 - Clone this repository to your local machine using the following command:
 
-- git clone https://github.com/gervislm/task-manager.git
+- git clone https://github.com/gervislm/todoMachine.git
 
 2 - Navigate to the project directory:
 
-- cd task-manager
+- cd todoMachine
 
 3 - Install the dependencies using npm or yarn:
 
