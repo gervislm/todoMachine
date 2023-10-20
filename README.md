@@ -10,7 +10,6 @@ Features
 Create Tasks: Users can add new tasks by specifying a title and description.
 Mark Tasks as Completed: Users can mark a task as completed and vice versa.
 Delete Tasks: Users can delete tasks that are no longer necessary.
-Filter Tasks: Users can search for a task by typing part of the task in the search bar.
 Data Persistence: Tasks are stored locally in the user's browser so that they persist even after closing the application.
 
 Install
