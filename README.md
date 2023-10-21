@@ -84,4 +84,4 @@ This project is licensed under the MIT License. For details, see the [LICENSE](L
 
 ---
 
-We hope you enjoy working on this project and that it is useful for your task management needs with React! If you have any questions or problems, feel free to create an issue in the repository.
+I hope you enjoy working on this project and that it is useful for your task management needs with React! If you have any questions or problems, feel free to create an issue in the repository.
